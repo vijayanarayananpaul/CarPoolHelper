@@ -4,3 +4,6 @@
 *.iml
 target/
 CarPoolHelper.iml
+.settings
+.project
+.classpath
