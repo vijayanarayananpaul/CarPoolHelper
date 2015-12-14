@@ -8,6 +8,6 @@ public class carPoolHelperApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(carPoolHelperApplication.class, args);
-        System.out.println("Hello CarPool App");
+        System.out.println("Hello CarPool Application");
     }
 }
