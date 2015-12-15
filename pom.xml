@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>CarPoolHelper</groupId>
   <artifactId>CarPoolApp</artifactId>
-  <packaging>jar</packaging>
+  <packaging>ear</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>CarPoolApp Maven Webapp</name>
   <url>http://maven.apache.org</url>
