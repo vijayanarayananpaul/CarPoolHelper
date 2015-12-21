@@ -13,12 +13,12 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @Configuration
 @EnableAutoConfiguration
 /*@ComponentScan*/
-@ComponentScan(basePackages = "com.carpool.controller")
+@ComponentScan({"com.carpool.controller","com.carpool.helper"})
 public class carPoolHelperApplication extends SpringBootServletInitializer{
-	 @Override
+	 /*@Override
 	    protected final SpringApplicationBuilder configure(final SpringApplicationBuilder application) {
 	        return application.sources(carPoolHelperApplication.class);
-	    }
+	    }*/
     public static void main(String[] args) {
         SpringApplication.run(carPoolHelperApplication.class, args);
         System.out.println("CarPool Application Started");
