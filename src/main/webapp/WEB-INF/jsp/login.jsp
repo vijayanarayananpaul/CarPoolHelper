@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
 <title>Car Pool App Login</title>
@@ -26,7 +27,7 @@
 		<div class="card"></div>
 		<div class="card">
 			<h1 class="title">Login</h1>
-			<form:form method="post" modelAttribute="LoginBean" action="/login">
+			<form:form method="Post" modelAttribute="LoginBean" action="/loginApp">
 				<div class="input-container">
 					<form:input type="text" path="Username" id="Username" required="required" /> <label
 						for="Username">Username</label>
