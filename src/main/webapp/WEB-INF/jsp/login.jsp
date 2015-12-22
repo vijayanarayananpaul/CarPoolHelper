@@ -11,7 +11,7 @@
 <link rel='stylesheet prefetch'
 	href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
 <link rel="stylesheet" href="/css/reset.css">
-<link rel="stylesheet" type="text/css" href="/css/style.css">
+
 <script	src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="/js/index.js"></script>
 </head>
@@ -27,7 +27,7 @@
 		<div class="card"></div>
 		<div class="card">
 			<h1 class="title">Login</h1>
-			<form:form method="Post" modelAttribute="LoginBean" action="/loginApp">
+			<form:form method="Post" action="/carPoolApp/loginApp" modelAttribute="loginBean">
 				<div class="input-container">
 					<form:input type="text" path="Username" id="Username" required="required" /> <label
 						for="Username">Username</label>
