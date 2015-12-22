@@ -5,7 +5,7 @@
 <html>
 <head>
 <title>Car Pool App Login</title>
-<%@include file="/resources/include.jsp"%>
+<%@include file="/resources/include"%>
 
 <link rel='stylesheet prefetch'
 	href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
