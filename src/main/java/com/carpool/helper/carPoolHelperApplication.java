@@ -1,24 +1,45 @@
 package com.carpool.helper;
 
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRegistration;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.WebApplicationInitializer;
+import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
+import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.ViewResolver;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+
+import com.carpool.beans.WebContextConfiguration;
 
 @Configuration
 @EnableAutoConfiguration
 /*@ComponentScan*/
 @ComponentScan({"com.carpool.controller","com.carpool.helper","com.carpool.beans"})
-public class carPoolHelperApplication extends SpringBootServletInitializer{
+public class carPoolHelperApplication extends SpringBootServletInitializer implements WebApplicationInitializer {
 	 /*@Override
 	    protected final SpringApplicationBuilder configure(final SpringApplicationBuilder application) {
 	        return application.sources(carPoolHelperApplication.class);
 	    }*/
+
+	  @Override
+	    public void onStartup(ServletContext servletContext) throws ServletException {
+	        AnnotationConfigWebApplicationContext annotationConfigWebApplicationContext = new AnnotationConfigWebApplicationContext();
+	        annotationConfigWebApplicationContext.register(WebContextConfiguration.class);
+
+	        ServletRegistration.Dynamic dispatcher = servletContext.addServlet(
+	                "SpringDispatcher",new DispatcherServlet(annotationConfigWebApplicationContext)
+	        );
+	        dispatcher.setLoadOnStartup(1);
+	        dispatcher.addMapping("/");
+	    }
     public static void main(String[] args) {
         SpringApplication.run(carPoolHelperApplication.class, args);
         System.out.println("CarPool Application Started");
