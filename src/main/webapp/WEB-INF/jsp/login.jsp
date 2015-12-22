@@ -6,18 +6,20 @@
 <head>
 <title>Car Pool App Login</title>
 <%@include file="/WEB-INF/jsp/include.jsp"%>
+<c:set var="myContext" value="${pageContext.request.contextPath}"/>
 <link rel='stylesheet prefetch'
 	href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
 <link rel='stylesheet prefetch'
 	href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
-<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
 
 <script	src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="/js/index.js"></script>
 </head>
 
 <body>
-	<div class="pen-title">
+<c:out value="${myContext}"></c:out>
+	<div class="pen-title"> ${pageContext.request.contextPath}
 		<h1>Car Pool Login</h1>
 	</div>
 	<div class="rerun">
