@@ -5,22 +5,21 @@
 <html>
 <head>
 <title>Car Pool App Login</title>
+<script	src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <%@include file="/WEB-INF/jsp/include.jsp"%>
 
 <link rel='stylesheet prefetch'
 	href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
 <link rel='stylesheet prefetch'
 	href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
-<%-- <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css"> --%>
 
-<script	src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<!-- <script src="/js/index.js"></script> -->
+
 </head>
 
 <body>
 <c:out value="${myContext}"></c:out>
 	<div class="pen-title"> ${pageContext.request.contextPath}
-		<h1>Car Pool Login</h1>
+		<h1>Car Pool Application Login</h1>
 	</div>
 	<div class="rerun">
 		<a href="">Reset Pen</a>

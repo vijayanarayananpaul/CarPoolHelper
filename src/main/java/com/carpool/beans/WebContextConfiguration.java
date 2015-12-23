@@ -27,16 +27,20 @@ public class WebContextConfiguration extends WebMvcAutoConfigurationAdapter {
 		if (!registry.hasMappingForPattern("/webjars/**")) {
 			registry.addResourceHandler("/webjars/**").addResourceLocations(
 					"classpath:/META-INF/resources/webjars/");
+			registry.addResourceHandler("/resources/js/**")
+					.addResourceLocations("classpath:/js/");
+			registry.addResourceHandler("/resources/**").addResourceLocations(
+					"classpath:/css");
 
-			registry.addResourceHandler("/resources/**")
-					.addResourceLocations("/resources/");
 		}
 		if (!registry.hasMappingForPattern("/**")) {
 			registry.addResourceHandler("/**").addResourceLocations(
 					"/resources/public");
+			registry.addResourceHandler("/resources/js/**")
+					.addResourceLocations("classpath:/js/");
+			registry.addResourceHandler("/resources/**").addResourceLocations(
+					"classpath:/css");
 
-			registry.addResourceHandler("/resources/**")
-					.addResourceLocations("/resources/");
 		}
 
 	}
