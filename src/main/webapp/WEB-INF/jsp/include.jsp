@@ -5,7 +5,7 @@
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="f" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var="myContext" value="${pageContext.request.contextPath}"/>
-<link href="<c:url value="${myContext}/resources/css/style.css" />" rel="stylesheet">
+<link href="<c:url value="/resources/style.css" />" rel="stylesheet">
 <html>
 <head>
 <title></title>
