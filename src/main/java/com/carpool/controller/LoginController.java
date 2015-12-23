@@ -22,6 +22,7 @@ public class LoginController {
 	@RequestMapping(value = "/applogin", method = RequestMethod.GET)
 	public ModelAndView appLoader(Model model) {
 		/* ModelMap model = new ModelMap(); */
+		System.out.println("hi how r u");
 		model.addAttribute("loginBean", new LoginBean());
 		ModelAndView mvc = new ModelAndView();
 		mvc.setViewName("login");
