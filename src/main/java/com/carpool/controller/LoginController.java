@@ -15,8 +15,8 @@ import com.carpool.service.LoginService;
 @Controller
 @RequestMapping("/carPoolApp")
 public class LoginController {
-@Autowired
-private LoginService loginService;
+/*@Autowired
+private LoginService loginService;*/
 
 	@RequestMapping(value = "/applogin", method = RequestMethod.GET)
 	public ModelAndView appLoader(Model model) {
@@ -37,6 +37,7 @@ private LoginService loginService;
 			return new ModelAndView("sample");
 		} else {
 			// process(userDomain);
+			//LoginBean loginBean1=loginService.validateUser();
 			System.out.println("No error occured");
 			return new ModelAndView("sample");
 		}

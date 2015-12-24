@@ -1,5 +1,11 @@
 package com.carpool.service;
 
-public class LoginService {
 
+import com.carpool.beans.LoginBean;
+
+public class LoginService {
+	
+	public LoginBean validateUser(){
+		return new LoginBean();
+	}
 }
